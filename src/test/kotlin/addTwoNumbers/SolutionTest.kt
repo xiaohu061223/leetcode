@@ -10,7 +10,7 @@ class SolutionTest {
     fun `add two numbers test case 1`() {
         val linkA = createLinkFromArray(intArrayOf(2, 4, 3))
         val linkB = createLinkFromArray(intArrayOf(5, 6, 4))
-        val result = Solution().addTwoNumbers(linkA, linkB)
+        val result = Solution().addTwoNumbersRe(linkA, linkB)
         assertNotNull(result)
         assertEquals(result.`val`, 7)
         assertEquals(result.next?.`val`, 0)
@@ -21,7 +21,7 @@ class SolutionTest {
     fun `add two numbers test case 2`() {
         val linkA = createLinkFromArray(intArrayOf(0))
         val linkB = createLinkFromArray(intArrayOf(0))
-        val result = Solution().addTwoNumbers(linkA, linkB)
+        val result = Solution().addTwoNumbersRe(linkA, linkB)
         assertNotNull(result)
         assertEquals(result.`val`, 0)
         assertNull(result.next)
@@ -31,7 +31,7 @@ class SolutionTest {
     fun `add two numbers test case 3`() {
         val linkA = createLinkFromArray(intArrayOf(9, 9, 9, 9, 9, 9, 9))
         val linkB = createLinkFromArray(intArrayOf(9, 9, 9, 9))
-        val result = Solution().addTwoNumbers(linkA, linkB)
+        val result = Solution().addTwoNumbersRe(linkA, linkB)
         assertNotNull(result)
         assertEquals(result.`val`, 8)
         assertEquals(result.next?.`val`, 9)

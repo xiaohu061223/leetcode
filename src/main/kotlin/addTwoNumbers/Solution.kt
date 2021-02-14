@@ -53,4 +53,16 @@ class Solution {
         }
         return head.next
     }
+
+    fun addTwoNumbersRe(l1: ListNode?, l2: ListNode?): ListNode? {
+        return recursion(l1, l2, 0)
+    }
+
+    private fun recursion(l1: ListNode?, l2: ListNode?, needPlus: Int): ListNode? {
+        if (l1 == null && l2 == null && needPlus == 0) return null
+        val sums = (l1?.`val` ?: 0) + (l2?.`val` ?: 0) + needPlus
+        val newNode = ListNode(sums % 10)
+        newNode.next = recursion(l1?.next, l2?.next, sums / 10)
+        return newNode
+    }
 }
