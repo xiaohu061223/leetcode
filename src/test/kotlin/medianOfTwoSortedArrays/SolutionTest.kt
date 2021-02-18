@@ -8,7 +8,7 @@ internal class SolutionTest {
     fun `test case 1`() {
         val nums1 = intArrayOf(1, 3)
         val nums2 = intArrayOf(2)
-        val result = Solution().findMedianSortedArrays(nums1, nums2)
+        val result = Solution().findMedianSortedArraysV1(nums1, nums2)
         assertEquals(2.0, result)
     }
 

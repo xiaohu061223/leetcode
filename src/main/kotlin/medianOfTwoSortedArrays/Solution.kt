@@ -34,4 +34,40 @@ class Solution {
         return if (numbers % 2 == 1) combinedNums[medianIndex].toDouble() else
             (combinedNums[medianIndex] + combinedNums[medianIndex - 1]).toDouble() / 2
     }
+
+    // 二分查找法
+    // find k th
+    fun findMedianSortedArraysV1(nums1: IntArray, nums2: IntArray): Double {
+        val leftK = (nums1.size + nums2.size + 1) / 2
+        val rightK = (nums1.size + nums2.size + 2) / 2
+        return (binarySearch(nums1, nums2, leftK) + binarySearch(nums1, nums2, rightK)).toDouble() / 2
+    }
+
+    private fun binarySearch(
+        nums1: IntArray,
+        nums2: IntArray,
+        k: Int
+    ): Int {
+        // recursion out
+        if (nums1.isEmpty()) return nums2[k]
+        if (nums2.isEmpty()) return nums1[k]
+
+        if (k == 1) return nums1[0].coerceAtMost(nums2[0])
+
+        val num1K = nums1.size.coerceAtMost(k / 2) - 1
+        val num2k = nums2.size.coerceAtMost(k / 2) - 1
+        return when (nums1[num1K] < nums2[num2k]) {
+            true -> binarySearch(
+                nums1.copyOfRange(num1K + 1, nums1.size),
+                nums2,
+                k - (num1K + 1)
+            )
+            else -> binarySearch(
+                nums1,
+                nums2.copyOfRange(num2k + 1, nums2.size),
+                k - (num2k + 1)
+            )
+
+        }
+    }
 }
