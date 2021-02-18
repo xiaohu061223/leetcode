@@ -54,20 +54,17 @@ class Solution {
 
         if (k == 1) return nums1[0].coerceAtMost(nums2[0])
 
-        val num1K = nums1.size.coerceAtMost(k / 2) - 1
-        val num2k = nums2.size.coerceAtMost(k / 2) - 1
-        return when (nums1[num1K] < nums2[num2k]) {
-            true -> binarySearch(
-                nums1.copyOfRange(num1K + 1, nums1.size),
-                nums2,
-                k - (num1K + 1)
-            )
-            else -> binarySearch(
-                nums1,
-                nums2.copyOfRange(num2k + 1, nums2.size),
-                k - (num2k + 1)
-            )
-
-        }
+        val nums1Index = nums1.size.coerceAtMost(k / 2) - 1
+        val nums2Index = nums2.size.coerceAtMost(k / 2) - 1
+        return if (nums1[nums1Index] < nums2[nums2Index]) binarySearch(
+            nums1.copyOfRange(nums1Index + 1, nums1.size),
+            nums2,
+            k - (nums1Index + 1)
+        )
+        else binarySearch(
+            nums1,
+            nums2.copyOfRange(nums2Index + 1, nums2.size),
+            k - (nums2Index + 1)
+        )
     }
 }
