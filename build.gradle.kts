@@ -10,6 +10,8 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    gradlePluginPortal()
+    jcenter()
 }
 
 dependencies {
