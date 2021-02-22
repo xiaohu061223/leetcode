@@ -14,7 +14,7 @@ internal class SolutionTest {
         val n = 2
         assertArrayEquals(
             intArrayOf(1, 2, 3, 5),
-            solution.removeNthFromEnd(head.buildLink(), 2)?.buildArray()
+            solution.removeNThFromEndV1(head.buildLink(), 2)?.buildArray()
         )
     }
 
@@ -24,7 +24,7 @@ internal class SolutionTest {
         val n = 1
         assertArrayEquals(
             intArrayOf(),
-            solution.removeNthFromEnd(head.buildLink(), n)?.buildArray() ?: intArrayOf()
+            solution.removeNThFromEndV1(head.buildLink(), n)?.buildArray() ?: intArrayOf()
         )
     }
 
@@ -34,7 +34,7 @@ internal class SolutionTest {
         val n = 1
         assertArrayEquals(
             intArrayOf(1),
-            solution.removeNthFromEnd(head.buildLink(), n)?.buildArray() ?: intArrayOf()
+            solution.removeNThFromEndV1(head.buildLink(), n)?.buildArray() ?: intArrayOf()
         )
     }
 }
