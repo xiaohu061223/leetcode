@@ -1,5 +1,6 @@
 package addTwoNumbers
 
+import common.buildLink
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -43,26 +44,5 @@ class SolutionTest {
         assertEquals(result.next?.next?.next?.next?.next?.next?.next?.`val`, 1)
     }
 
-    @Test
-    fun `create link function test`() {
-        val array = intArrayOf(1, 2, 4)
-        val link = array.buildLink()
-        assertNotNull(link)
-        assertEquals(link.`val`, 1)
-        assertEquals(link.next?.`val`, 2)
-        assertEquals(link.next?.next?.`val`, 4)
-        assertEquals(link.next?.next?.next, null)
-    }
 }
 
-private fun IntArray.buildLink(): ListNode? {
-    if (this.isEmpty()) return null
-    val head = ListNode(-1)
-    var current = head
-    this.forEach {
-        val node = ListNode(it)
-        current.next = node
-        current = node
-    }
-    return head.next
-}
