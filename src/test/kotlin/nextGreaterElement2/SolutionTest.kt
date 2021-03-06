@@ -9,7 +9,7 @@ internal class SolutionTest {
     @Test
     fun `test case 1`() {
         val nums = intArrayOf(1, 2, 1)
-        val result = solution.nextGreaterElements(nums)
+        val result = solution.nextGreaterElementsV1(nums)
         Assertions.assertArrayEquals(intArrayOf(2, -1, 2), result)
     }
 }

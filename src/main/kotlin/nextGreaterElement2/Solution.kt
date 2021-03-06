@@ -24,4 +24,18 @@ class Solution {
         }
         return -1
     }
+
+    /*stack version*/
+    fun nextGreaterElementsV1(nums: IntArray): IntArray {
+        val result = IntArray(nums.size) { i -> -1 }
+        val stack = mutableListOf<Int>()
+        for (i in 0 until nums.size * 2) {
+            while (stack.isNotEmpty() && nums[stack.last()] < nums[i % nums.size]) {
+                result[stack.last()] = nums[i % nums.size]
+                stack.removeLast()
+            }
+            stack.add(i % nums.size)
+        }
+        return result
+    }
 }
