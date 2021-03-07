@@ -9,3 +9,7 @@ fun IntArray.log() {
     println()
     println("-------------")
 }
+
+fun <T> List<T>.log() {
+    println(this.joinToString(","))
+}
