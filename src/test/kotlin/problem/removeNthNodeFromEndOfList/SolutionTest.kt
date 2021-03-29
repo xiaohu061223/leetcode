@@ -1,6 +1,6 @@
 package problem.removeNthNodeFromEndOfList
 
-import common.buildArray
+import common.toArray
 import common.buildLink
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
@@ -14,7 +14,7 @@ internal class SolutionTest {
         val n = 2
         assertArrayEquals(
             intArrayOf(1, 2, 3, 5),
-            solution.removeNThFromEndV1(head.buildLink(), 2)?.buildArray()
+            solution.removeNThFromEndV1(head.buildLink(), 2)?.toArray()
         )
     }
 
@@ -24,7 +24,7 @@ internal class SolutionTest {
         val n = 1
         assertArrayEquals(
             intArrayOf(),
-            solution.removeNThFromEndV1(head.buildLink(), n)?.buildArray() ?: intArrayOf()
+            solution.removeNThFromEndV1(head.buildLink(), n)?.toArray() ?: intArrayOf()
         )
     }
 
@@ -34,7 +34,7 @@ internal class SolutionTest {
         val n = 1
         assertArrayEquals(
             intArrayOf(1),
-            solution.removeNThFromEndV1(head.buildLink(), n)?.buildArray() ?: intArrayOf()
+            solution.removeNThFromEndV1(head.buildLink(), n)?.toArray() ?: intArrayOf()
         )
     }
 }

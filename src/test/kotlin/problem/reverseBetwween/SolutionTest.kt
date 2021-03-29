@@ -1,6 +1,6 @@
 package problem.reverseBetwween
 
-import common.buildArray
+import common.toArray
 import common.buildLink
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -14,7 +14,7 @@ internal class SolutionTest {
             intArrayOf(1, 2, 3, 4, 5).buildLink(),
             2,
             4,
-        )?.buildArray()
+        )?.toArray()
         assertThat(result).isEqualTo(intArrayOf(1, 4, 3, 2, 5))
     }
 
@@ -24,7 +24,7 @@ internal class SolutionTest {
             intArrayOf(5).buildLink(),
             1,
             1,
-        )?.buildArray()
+        )?.toArray()
         assertThat(result).isEqualTo(intArrayOf(5))
     }
 
@@ -34,7 +34,7 @@ internal class SolutionTest {
             intArrayOf(3,5).buildLink(),
             1,
             2,
-        )?.buildArray()
+        )?.toArray()
         assertThat(result).isEqualTo(intArrayOf(5,3))
     }
 }

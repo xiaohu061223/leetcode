@@ -1,6 +1,6 @@
 package problem.mergeTwoSortedLists
 
-import common.buildArray
+import common.toArray
 import common.buildLink
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
@@ -15,7 +15,7 @@ internal class SolutionTest {
         val result = solution.mergeTwoLists(array1.buildLink(), array2.buildLink())
         assertArrayEquals(
             intArrayOf(1, 1, 2, 3, 4, 4),
-            result?.buildArray() ?: intArrayOf()
+            result?.toArray() ?: intArrayOf()
         )
     }
 
@@ -26,7 +26,7 @@ internal class SolutionTest {
         val result = solution.mergeTwoLists(array1.buildLink(), array2.buildLink())
         assertArrayEquals(
             intArrayOf(),
-            result?.buildArray() ?: intArrayOf()
+            result?.toArray() ?: intArrayOf()
         )
     }
 
@@ -37,7 +37,7 @@ internal class SolutionTest {
         val result = solution.mergeTwoLists(array1.buildLink(), array2.buildLink())
         assertArrayEquals(
             intArrayOf(0),
-            result?.buildArray() ?: intArrayOf()
+            result?.toArray() ?: intArrayOf()
         )
     }
 }

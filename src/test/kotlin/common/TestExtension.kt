@@ -19,7 +19,7 @@ fun IntArray.buildLink(): ListNode? {
 
 fun singlyLinkedListOf(vararg elements: Int) = elements.buildLink()
 
-fun ListNode.buildArray(): IntArray = recursion(this, intArrayOf())
+fun ListNode.toArray(): IntArray = recursion(this, intArrayOf())
 
 private fun recursion(node: ListNode, array: IntArray): IntArray {
     val newArray = array.plus(node.`val`)
@@ -41,7 +41,7 @@ class ExtensionTest {
     @Test
     fun `link to array`() {
         val array = intArrayOf(1, 2, 3, 4, 5)
-        val newArray = array.buildLink()?.buildArray()
+        val newArray = array.buildLink()?.toArray()
         assertArrayEquals(newArray, array)
     }
 }
