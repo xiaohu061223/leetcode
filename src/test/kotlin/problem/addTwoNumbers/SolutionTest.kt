@@ -1,48 +1,23 @@
 package problem.addTwoNumbers
 
-import common.buildLink
-import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
-import kotlin.test.assertNull
+import common.ListNode
+import common.singlyLinkedListOf
+import core.ISolution
+import core.ISolutionTest
 
-class SolutionTest {
-    @Test
-    fun `add two numbers test case 1`() {
-        val linkA = intArrayOf(2, 4, 3).buildLink()
-        val linkB = intArrayOf(5, 6, 4).buildLink()
-        val result = Solution().addTwoNumbersRe(linkA, linkB)
-        assertNotNull(result)
-        assertEquals(result.`val`, 7)
-        assertEquals(result.next?.`val`, 0)
-        assertEquals(result.next?.next?.`val`, 8)
-    }
+class SolutionTest : ISolutionTest<List<ListNode?>, ListNode?>() {
+    private val normalSolution = NormalSolution()
+    private val recursionSolution = RecursionSolution()
 
-    @Test
-    fun `add two numbers test case 2`() {
-        val linkA = intArrayOf(0).buildLink()
-        val linkB = intArrayOf(0).buildLink()
-        val result = Solution().addTwoNumbersRe(linkA, linkB)
-        assertNotNull(result)
-        assertEquals(result.`val`, 0)
-        assertNull(result.next)
-    }
-
-    @Test
-    fun `add two numbers test case 3`() {
-        val linkA = intArrayOf(9, 9, 9, 9, 9, 9, 9).buildLink()
-        val linkB = intArrayOf(9, 9, 9, 9).buildLink()
-        val result = Solution().addTwoNumbersRe(linkA, linkB)
-        assertNotNull(result)
-        assertEquals(result.`val`, 8)
-        assertEquals(result.next?.`val`, 9)
-        assertEquals(result.next?.next?.`val`, 9)
-        assertEquals(result.next?.next?.next?.`val`, 9)
-        assertEquals(result.next?.next?.next?.next?.`val`, 0)
-        assertEquals(result.next?.next?.next?.next?.next?.`val`, 0)
-        assertEquals(result.next?.next?.next?.next?.next?.next?.`val`, 0)
-        assertEquals(result.next?.next?.next?.next?.next?.next?.next?.`val`, 1)
-    }
-
+    override val solutions: List<ISolution<List<ListNode?>, ListNode?>> = listOf(
+        normalSolution,
+        recursionSolution,
+    )
+    override val testCases: List<Pair<List<ListNode?>, ListNode?>> = listOf(
+        listOf(singlyLinkedListOf(2, 4, 3), singlyLinkedListOf(5, 6, 4)) to singlyLinkedListOf(7, 0, 8),
+        listOf(singlyLinkedListOf(0), singlyLinkedListOf(0)) to singlyLinkedListOf(0),
+        listOf(singlyLinkedListOf(9, 9, 9, 9, 9, 9, 9),
+            singlyLinkedListOf(9, 9, 9, 9)) to singlyLinkedListOf(8, 9, 9, 9, 0, 0, 0, 1),
+    )
 }
 

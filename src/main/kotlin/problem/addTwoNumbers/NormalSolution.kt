@@ -1,6 +1,7 @@
 package problem.addTwoNumbers
 
 import common.ListNode
+import core.ISolution
 
 
 /**
@@ -8,8 +9,8 @@ import common.ListNode
  * 请你将两个数相加，并以相同形式返回一个表示和的链表。
  * 你可以假设除了数字 0 之外，这两个数都不会以0开头。
  */
-class Solution {
-    fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
+class NormalSolution : ISolution<List<ListNode?>, ListNode?> {
+    private fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         val head = ListNode(-1)
         var current: ListNode? = head
         var needPlusOne = 0
@@ -35,15 +36,5 @@ class Solution {
         return head.next
     }
 
-    fun addTwoNumbersRe(l1: ListNode?, l2: ListNode?): ListNode? {
-        return recursion(l1, l2, 0)
-    }
-
-    private fun recursion(l1: ListNode?, l2: ListNode?, needPlus: Int): ListNode? {
-        if (l1 == null && l2 == null && needPlus == 0) return null
-        val sums = (l1?.`val` ?: 0) + (l2?.`val` ?: 0) + needPlus
-        val newNode = ListNode(sums % 10)
-        newNode.next = recursion(l1?.next, l2?.next, sums / 10)
-        return newNode
-    }
+    override fun run(input: List<ListNode?>): ListNode? = addTwoNumbers(input[0], input[1])
 }

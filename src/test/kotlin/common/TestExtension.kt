@@ -17,6 +17,8 @@ fun IntArray.buildLink(): ListNode? {
     return head.next
 }
 
+fun singlyLinkedListOf(vararg elements: Int) = elements.buildLink()
+
 fun ListNode.buildArray(): IntArray = recursion(this, intArrayOf())
 
 private fun recursion(node: ListNode, array: IntArray): IntArray {
