@@ -18,6 +18,7 @@ fun IntArray.buildLink(): ListNode? {
 }
 
 fun singlyLinkedListOf(vararg elements: Int) = elements.buildLink()
+fun emptyLinkedList() = singlyLinkedListOf()
 
 fun ListNode.toArray(): IntArray = recursion(this, intArrayOf())
 
