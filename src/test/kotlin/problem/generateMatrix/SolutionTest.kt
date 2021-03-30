@@ -21,10 +21,12 @@ internal class SolutionTest {
     @Test
     fun `test case 3`() {
         val result = solution.generateMatrix(3)
-        assertThat(result).isEqualTo(arrayOf(
-            intArrayOf(1, 2, 3),
-            intArrayOf(8, 9, 4),
-            intArrayOf(7, 6, 5)
-        ))
+        assertThat(result).isEqualTo(
+            arrayOf(
+                intArrayOf(1, 2, 3),
+                intArrayOf(8, 9, 4),
+                intArrayOf(7, 6, 5)
+            )
+        )
     }
 }

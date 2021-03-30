@@ -1,6 +1,5 @@
 package problem.isValidSerialization
 
-
 class Solution {
     fun isValidSerialization(preorder: String): Boolean {
         return recursion(preorder.split(",").toMutableList())
@@ -24,5 +23,4 @@ class Solution {
         }
         return false
     }
-
 }

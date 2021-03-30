@@ -1,6 +1,5 @@
 package problem.generateParentheses
 
-
 class Solution {
     fun generateParenthesis(n: Int): List<String> {
         val result = mutableListOf<String>()
@@ -20,4 +19,3 @@ class Solution {
 
     private fun String.sizeOfChar(char: Char): Int = this.filter { it == char }.length
 }
-

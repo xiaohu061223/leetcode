@@ -49,8 +49,8 @@ class Solution {
         k: Int
     ): Int {
         // recursion out
-        if (nums1.isEmpty()) return nums2[k-1]
-        if (nums2.isEmpty()) return nums1[k-1]
+        if (nums1.isEmpty()) return nums2[k - 1]
+        if (nums2.isEmpty()) return nums1[k - 1]
 
         if (k == 1) return nums1[0].coerceAtMost(nums2[0])
 

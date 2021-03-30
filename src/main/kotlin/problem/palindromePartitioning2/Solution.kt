@@ -9,7 +9,6 @@ class Solution {
             else {
                 for (j in 0 until i) {
                     if (isPalindrome(s, j + 1, i)) dpList[i] = dpList[i].coerceAtMost(dpList[j] + 1)
-
                 }
             }
         }

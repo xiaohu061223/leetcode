@@ -1,7 +1,7 @@
 package problem.mergeTwoSortedLists
 
-import common.toArray
 import common.buildLink
+import common.toArray
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 

@@ -6,7 +6,7 @@ package problem.twoSum
  */
 class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
-        val map = mutableMapOf<Int, Int>()// <numbers, index>
+        val map = mutableMapOf<Int, Int>() // <numbers, index>
         for ((index, number) in nums.withIndex()) {
             map[target - number]?.run { return intArrayOf(this, index) }
             map[nums[index]] = index

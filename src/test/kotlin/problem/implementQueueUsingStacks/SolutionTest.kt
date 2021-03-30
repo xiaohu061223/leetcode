@@ -16,5 +16,3 @@ internal class SolutionTest {
         assertFalse(queue.empty())
     }
 }
-
-

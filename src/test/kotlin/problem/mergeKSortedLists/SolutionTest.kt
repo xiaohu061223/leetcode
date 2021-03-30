@@ -20,4 +20,3 @@ internal class SolutionTest : ISolutionTest<Array<ListNode?>, ListNode?>() {
         arrayOf(emptyLinkedList()) to emptyLinkedList(),
     )
 }
-

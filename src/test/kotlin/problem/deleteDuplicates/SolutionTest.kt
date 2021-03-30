@@ -1,7 +1,7 @@
 package problem.deleteDuplicates
 
-import common.toArray
 import common.buildLink
+import common.toArray
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
@@ -22,5 +22,4 @@ internal class SolutionTest {
             )?.toArray()
         ).isEqualTo(intArrayOf(2, 3))
     }
-
 }

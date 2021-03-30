@@ -18,5 +18,4 @@ internal class SolutionTest {
         hashSet.remove(2)
         assertThat(hashSet.contains(2)).isFalse
     }
-
 }

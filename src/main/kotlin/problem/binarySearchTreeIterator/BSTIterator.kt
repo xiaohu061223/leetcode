@@ -2,7 +2,6 @@ package problem.binarySearchTreeIterator
 
 import common.TreeNode
 
-
 class BSTIterator(root: TreeNode?) {
     var stack = mutableListOf<Int>()
 

@@ -12,15 +12,16 @@ internal class SolutionTest {
             solution.numDistinct(
                 "rabbbit",
                 "rabbit",
-            ))
+            )
+        )
             .isEqualTo(3)
 
         assertThat(
             solution.numDistinct(
                 "babgbag",
                 "bag",
-            ))
+            )
+        )
             .isEqualTo(5)
     }
 }
-

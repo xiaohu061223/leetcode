@@ -1,7 +1,5 @@
 package problem.calculate
 
-
-
 class Solution {
     private val OP_MAPS = mapOf(
         '*' to 2,

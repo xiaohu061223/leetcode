@@ -1,7 +1,7 @@
 package problem.reverseBetwween
 
-import common.toArray
 import common.buildLink
+import common.toArray
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
@@ -31,10 +31,10 @@ internal class SolutionTest {
     @Test
     fun `test case 3`() {
         val result = solution.reverseBetween(
-            intArrayOf(3,5).buildLink(),
+            intArrayOf(3, 5).buildLink(),
             1,
             2,
         )?.toArray()
-        assertThat(result).isEqualTo(intArrayOf(5,3))
+        assertThat(result).isEqualTo(intArrayOf(5, 3))
     }
 }

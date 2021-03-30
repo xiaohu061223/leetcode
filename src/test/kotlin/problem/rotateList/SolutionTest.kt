@@ -1,7 +1,7 @@
 package problem.rotateList
 
-import common.toArray
 import common.buildLink
+import common.toArray
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 

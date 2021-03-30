@@ -10,11 +10,13 @@ class Solution {
         val stack = mutableListOf<Int>()
         for (i in tokens) {
             if (operations.contains(i)) {
-                stack.add(operate(
-                    stack.removeAt(stack.lastIndex),
-                    stack.removeAt(stack.lastIndex),
-                    i,
-                ))
+                stack.add(
+                    operate(
+                        stack.removeAt(stack.lastIndex),
+                        stack.removeAt(stack.lastIndex),
+                        i,
+                    )
+                )
             } else {
                 stack.add(i.toInt())
             }

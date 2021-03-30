@@ -23,5 +23,4 @@ class ListNode(val `val`: Int) {
         result = 31 * result + (next?.hashCode() ?: 0)
         return result
     }
-
 }
