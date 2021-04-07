@@ -1,4 +1,4 @@
-package common
+package common.althogrithm
 
 fun binarySearch(nums: IntArray, left: Int, right: Int, target: Int): Int {
     val mid = left + (right - left) / 2
