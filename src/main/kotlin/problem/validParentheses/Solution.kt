@@ -1,12 +1,14 @@
 package problem.validParentheses
 
+import core.ISolution
+
 /**
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']'的字符串 s ，判断字符串是否有效。
  * 有效字符串需满足：
  * 左括号必须用相同类型的右括号闭合。
  * 左括号必须以正确的顺序闭合。
  */
-class Solution {
+class Solution : ISolution<String, Boolean> {
     fun isValid(s: String): Boolean {
         if (s.isEmpty()) return false
         var stack = charArrayOf()
@@ -21,4 +23,6 @@ class Solution {
         }
         return stack.isEmpty()
     }
+
+    override fun run(input: String): Boolean = isValid(input)
 }

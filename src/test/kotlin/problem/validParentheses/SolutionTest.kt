@@ -1,39 +1,15 @@
 package problem.validParentheses
 
-import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.api.Test
-import kotlin.test.assertFalse
+import core.ISolution
+import core.ISolutionTest
 
-internal class SolutionTest {
-    private val solution = Solution()
-
-    @Test
-    fun `test case 1`() {
-        val s = "()"
-        assertTrue(solution.isValid(s))
-    }
-
-    @Test
-    fun `test case 2`() {
-        val s = "()[]{}"
-        assertTrue(solution.isValid(s))
-    }
-
-    @Test
-    fun `test case 3`() {
-        val s = "(]"
-        assertFalse(solution.isValid(s))
-    }
-
-    @Test
-    fun `test case 4`() {
-        val s = "([)]"
-        assertFalse(solution.isValid(s))
-    }
-
-    @Test
-    fun `test case 5`() {
-        val s = "{[]}"
-        assertTrue(solution.isValid(s))
-    }
+internal class SolutionTest : ISolutionTest<String, Boolean>() {
+    override val solutions: List<ISolution<String, Boolean>> = listOf(Solution())
+    override val testCases: List<Pair<String, Boolean>> = listOf(
+        "()" to true,
+        "()[]{}" to true,
+        "(]" to false,
+        "([)]" to false,
+        "{[]}" to true,
+    )
 }
