@@ -21,5 +21,3 @@ class Solution : ISolution<Pair<IntArray, Int>, Int> {
 
     override fun run(input: Pair<IntArray, Int>): Int = search(input.first, input.second)
 }
-
-

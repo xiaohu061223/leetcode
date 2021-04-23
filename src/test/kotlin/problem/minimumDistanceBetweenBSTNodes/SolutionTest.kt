@@ -8,6 +8,5 @@ internal class SolutionTest : ISolutionTest<TreeNode?, Int>() {
     override val solutions: List<ISolution<TreeNode?, Int>> = listOf(Solution())
 
     // TODO("build tree node")
-    override val testCases: List<Pair<TreeNode?, Int>> = listOf(
-    )
+    override val testCases: List<Pair<TreeNode?, Int>> = listOf()
 }

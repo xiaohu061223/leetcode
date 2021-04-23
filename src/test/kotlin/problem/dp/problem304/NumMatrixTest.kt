@@ -20,4 +20,3 @@ internal class NumMatrixTest {
         assertThat(numMatrix.sumRegion(1, 2, 2, 4)).isEqualTo(11)
     }
 }
-

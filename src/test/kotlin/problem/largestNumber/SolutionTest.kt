@@ -11,6 +11,6 @@ internal class SolutionTest : ISolutionTest<IntArray, String>() {
         intArrayOf(1) to "1",
         intArrayOf(10) to "10",
         intArrayOf(111311, 1113) to "1113111311",
-        intArrayOf(0,0) to "0",
+        intArrayOf(0, 0) to "0",
     )
 }
