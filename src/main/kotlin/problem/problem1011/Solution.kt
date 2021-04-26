@@ -41,7 +41,3 @@ class Solution : ISolution<Pair<IntArray, Int>, Int> {
         return shipWithinDays(input.first, input.second)
     }
 }
-
-fun main() {
-    print(Solution().check(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 5, 15))
-}
