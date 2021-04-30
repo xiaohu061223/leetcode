@@ -7,7 +7,7 @@ import core.ISolution
  */
 class Solution : ISolution<IntArray, Int> {
     private fun singleNumber(nums: IntArray): Int {
-        return nums.groupBy { value -> value to nums.filter { it == value }.size }.keys.first { it.second == 1 }.first
+        return nums.groupBy { it }.filter { it.value.size == 1 }.keys.first()
     }
 
     override fun run(input: IntArray): Int = singleNumber(input)
