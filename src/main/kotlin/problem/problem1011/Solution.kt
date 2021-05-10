@@ -8,7 +8,7 @@ import kotlin.math.min
  */
 class Solution : ISolution<Pair<IntArray, Int>, Int> {
     private fun shipWithinDays(weight: IntArray, D: Int): Int {
-        var left = weight.max() ?: return 0
+        var left = weight.maxOrNull() ?: return 0
         var right = weight.sum()
         var minResult = Int.MAX_VALUE
         while (left <= right) {

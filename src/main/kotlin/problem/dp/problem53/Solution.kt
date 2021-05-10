@@ -25,6 +25,6 @@ class Solution : ISolution<IntArray, Int> {
 //            dp[i] = maxOf(dp[i-1] +nums[i], nums[i])
         }
         dp.log()
-        return dp.max() ?: 0
+        return dp.maxOrNull() ?: 0
     }
 }
