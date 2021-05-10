@@ -1,7 +1,8 @@
-package problem.problem633
+package problem
 
 import core.ISolution
 import core.ISolutionTest
+import problem.problem633.Solution
 
 internal class SolutionTest : ISolutionTest<Int, Boolean>() {
     override val solutions: List<ISolution<Int, Boolean>> = listOf(Solution())
