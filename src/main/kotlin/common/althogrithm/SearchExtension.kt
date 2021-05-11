@@ -1,6 +1,6 @@
 package common.althogrithm
 
-fun binarySearch(nums: IntArray, left: Int, right: Int, target: Int): Int {
+internal tailrec fun binarySearch(nums: IntArray, left: Int, right: Int, target: Int): Int {
     val mid = left + (right - left) / 2
     return when {
         left >= right -> -1
