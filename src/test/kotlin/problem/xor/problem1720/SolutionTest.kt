@@ -1,4 +1,4 @@
-package problem.problem1720
+package problem.xor.problem1720
 
 import core.ISolution
 import core.ISolutionTest
