@@ -3,9 +3,9 @@ package common
 fun treeNodeBracketOf(expression: String): TreeNode? {
     val trimmedExpression = expression.trim()
     if (trimmedExpression.isBlank()) return null
-    if (trimmedExpression.length == 1) return TreeNode(trimmedExpression.first().code - 48)
+    if (trimmedExpression.length == 1) return TreeNode(trimmedExpression.first().digitToInt())
     try {
-        val root = TreeNode(trimmedExpression.first().code - 48)
+        val root = TreeNode(trimmedExpression.first().digitToInt())
         val first = findFirstBracketsContent(trimmedExpression.removePrefixOrEmpty(1))
         val second = findFirstBracketsContent(trimmedExpression.removePrefixOrEmpty(3 + first.size))
         root.left = treeNodeBracketOf(first.joinToString(""))
