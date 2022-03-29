@@ -20,4 +20,3 @@ internal class SolutionTest : ISolutionTest<Pair<IntArray, Array<IntArray>>, Int
         ) to intArrayOf(8, 0, 4, 4),
     )
 }
-

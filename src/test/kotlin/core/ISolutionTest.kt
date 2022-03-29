@@ -11,10 +11,12 @@ import org.junit.jupiter.params.provider.MethodSource
 abstract class ISolutionTest<I, E> {
     protected abstract val solutions: List<ISolution<I, E>>
     protected abstract val testCases: List<Pair<I, E>>
+    protected open val canTest: Boolean = true
 
     @ParameterizedTest
     @MethodSource("args")
     fun runTest(solution: ISolution<I, E>, input: I, expect: E) {
+        if (!canTest) return
         assertThat(solution.run(input)).isEqualTo(expect)
     }
 

@@ -10,4 +10,3 @@ internal class SolutionTest : ISolutionTest<IntArray, Int>() {
         intArrayOf(0, 1, 0, 1, 0, 1, 99) to 99,
     )
 }
-

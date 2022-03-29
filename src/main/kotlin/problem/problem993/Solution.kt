@@ -38,5 +38,4 @@ class Solution : ISolution<Triple<TreeNode?, Int, Int>, Boolean> {
 
     var xNode: NodeStructure? = null
     var yNode: NodeStructure? = null
-
 }

@@ -12,4 +12,3 @@ internal class SolutionTest : ISolutionTest<Pair<Int, Int>, Int>() {
         10 to 5 to 2,
     )
 }
-

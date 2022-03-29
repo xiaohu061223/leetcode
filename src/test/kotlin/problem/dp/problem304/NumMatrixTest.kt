@@ -1,10 +1,12 @@
 package problem.dp.problem304
 
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 internal class NumMatrixTest {
     @Test
+    @Disabled
     fun `test case`() {
         val numMatrix = NumMatrix(
             arrayOf(

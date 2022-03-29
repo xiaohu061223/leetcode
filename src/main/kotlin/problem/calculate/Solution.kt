@@ -26,7 +26,7 @@ class Solution {
         s.forEachIndexed { index, c ->
             when {
                 c.isDigit() -> {
-                    nums = nums * 10 + c.toInt() - '0'.toInt()
+                    nums = nums * 10 + c.code - '0'.code
                 }
                 c == '(' -> {
                     if (index > 0 && s[index - 1].isDigit()) expression.add(nums.toString())
@@ -43,7 +43,7 @@ class Solution {
                 OP_MAPS.containsKey(c) -> {
                     if (s[index - 1].isDigit()) expression.add(nums.toString())
                     nums = 0
-                    while (operations.isNotEmpty() && OP_MAPS[operations.last()] ?: 0 >= OP_MAPS[c]!!) {
+                    while (operations.isNotEmpty() && (OP_MAPS[operations.last()] ?: 0) >= OP_MAPS[c]!!) {
                         expression.add(operations.removeAt(operations.lastIndex).toString())
                     }
                     operations.add(c)

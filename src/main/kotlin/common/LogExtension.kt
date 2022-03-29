@@ -14,11 +14,8 @@ fun <T> List<T>.log() {
     println(this.joinToString(","))
 }
 
-
 fun Array<LongArray>.log() {
     repeat(this.size) {
         println(this[it].joinToString("|"))
     }
-
 }
-

@@ -19,6 +19,5 @@ internal class SolutionTest : ISolutionTest<Pair<Array<String>, Int>, List<Strin
             "is",
             "is",
         ) to 4 to listOf("the", "is", "sunny", "day"),
-        )
+    )
 }
-

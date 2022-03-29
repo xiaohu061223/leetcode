@@ -11,6 +11,6 @@ internal class SolutionTest : ISolutionTest<IntArray, Int>() {
         intArrayOf(2, 3) to 0,
         intArrayOf(1, 3, 5, 7, 9) to 3,
         intArrayOf(7, 11, 12, 9, 5, 2, 7, 17, 22) to 8,
-        intArrayOf(218,218) to 1,
+        intArrayOf(218, 218) to 1,
     )
 }

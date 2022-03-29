@@ -10,4 +10,3 @@ internal class SolutionTest : ISolutionTest<String, Int>() {
         "aba" to 2,
     )
 }
-

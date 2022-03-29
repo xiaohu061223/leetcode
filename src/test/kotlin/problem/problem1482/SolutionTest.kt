@@ -13,4 +13,3 @@ internal class SolutionTest : ISolutionTest<Triple<IntArray, Int, Int>, Int>() {
         Triple(intArrayOf(1, 10, 2, 9, 3, 8, 4, 7, 5, 6), 4, 2) to 9,
     )
 }
-

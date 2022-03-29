@@ -15,10 +15,12 @@ class Solution : ISolution<IntArray, IntArray> {
         }
         val firstValue = allXorSum.xor(oldXorSum)
         var current = firstValue
-        return (listOf(firstValue) + encoded.map {
-            val result = current.xor(it)
-            current = result
-            result
-        }).toIntArray()
+        return (
+            listOf(firstValue) + encoded.map {
+                val result = current.xor(it)
+                current = result
+                result
+            }
+            ).toIntArray()
     }
 }

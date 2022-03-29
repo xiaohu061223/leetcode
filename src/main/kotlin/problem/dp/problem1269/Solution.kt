@@ -23,11 +23,10 @@ class Solution : ISolution<Pair<Int, Int>, Int> {
                 val left = if (currentArrLen > 0) dpArrays[currentStep][currentArrLen - 1] else 0
                 val right = if (currentArrLen < arrLen - 1) dpArrays[currentStep][currentArrLen + 1] else 0
                 dpArrays[currentStep + 1][currentArrLen] = (
-                        dpArrays[currentStep][currentArrLen] + left + right
-                        ).mod((10.toDouble().pow(9.toDouble()) + 7).toLong())
+                    dpArrays[currentStep][currentArrLen] + left + right
+                    ).mod((10.toDouble().pow(9.toDouble()) + 7).toLong())
             }
         }
         return dpArrays[steps - 1][0].toInt()
     }
-
 }

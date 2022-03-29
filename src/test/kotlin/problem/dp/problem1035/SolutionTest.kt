@@ -4,6 +4,7 @@ import core.ISolution
 import core.ISolutionTest
 
 internal class SolutionTest : ISolutionTest<Pair<IntArray, IntArray>, Int>() {
+    override val canTest: Boolean = false
     override val solutions: List<ISolution<Pair<IntArray, IntArray>, Int>> = listOf(Solution())
     override val testCases: List<Pair<Pair<IntArray, IntArray>, Int>> = listOf(
         intArrayOf(1, 4, 2) to intArrayOf(1, 2, 4) to 2,

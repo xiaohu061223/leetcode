@@ -16,7 +16,6 @@ class Solution : ISolution<IntArray, Int> {
         val initValue = nums[0]
         val maxValue = 0
         repeat(nums.size - 1) {
-
         }
         return 0
     }

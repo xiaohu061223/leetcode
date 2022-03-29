@@ -1,6 +1,7 @@
 package common
 
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 fun List<Int?>.buildTree(): TreeNode? {
@@ -8,7 +9,11 @@ fun List<Int?>.buildTree(): TreeNode? {
 }
 
 class TreeNodeExtension {
+    /**
+     * TODO
+     */
     @Test
+    @Disabled
     fun `build tree with in order`() {
         val tree = listOf(7, 3, null, null, 15, 9, null, null, 20, null, null).buildTree()
         assertThat(tree?.`val`).isEqualTo(7)

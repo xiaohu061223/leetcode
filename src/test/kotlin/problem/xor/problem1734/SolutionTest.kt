@@ -10,4 +10,3 @@ internal class SolutionTest : ISolutionTest<IntArray, IntArray>() {
         intArrayOf(6, 5, 4, 6) to intArrayOf(2, 4, 1, 5, 3),
     )
 }
-

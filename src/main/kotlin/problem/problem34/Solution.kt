@@ -30,6 +30,5 @@ class Solution : ISolution<Pair<IntArray, Int>, IntArray> {
             nums[mid] > target -> binarySearch(nums, left, mid - 1, target)
             else -> intArrayOf(-1, -1)
         }
-
     }
 }
